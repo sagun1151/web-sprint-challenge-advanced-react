@@ -19,7 +19,7 @@ test("shows success message on submit with form details", async () => {
     const city = screen.getByLabelText(/city:/i);
     const state = screen.getByLabelText(/state:/i);
     const zip = screen.getByLabelText(/zip:/i);
-    const button = screen.queryByText('Checkout');
+    const button = screen.getByRole('button');
 
     userEvent.type(firstName, 'sagun');
     userEvent.type(lastName, 'shrestha');
