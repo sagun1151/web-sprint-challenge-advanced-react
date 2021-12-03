@@ -30,11 +30,10 @@ test("shows success message on submit with form details", async () => {
     userEvent.click(button);
 
     const success = screen.queryByText(/you have ordered some plants! woo-hoo!/i);
-    expect(success).toBeInTheDocument();
-
     const name = screen.queryByText(/sagun shrestha/i);
-    expect(name).toBeInTheDocument();
-
     const location = screen.queryByText(/moon, united 80000/i);
+    
+    expect(success).toBeInTheDocument();
+    expect(name).toBeInTheDocument();
     expect(location).toBeInTheDocument();
 });
